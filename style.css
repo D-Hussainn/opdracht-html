@@ -1,0 +1,81 @@
+.wrapper {
+    display: grid;
+    gap: 10px;
+    grid-template-areas:
+        "hd"
+        "nv"
+        "ct"
+        "sb"
+        "ad"
+        "ft";
+}
+
+.header {
+    grid-area: hd;
+    background-color: rgba(255, 255, 0, 0.527);
+    border: 2px solid orange;
+
+}
+
+.content {
+    grid-area: ct;
+    background-color: rgba(255, 255, 0, 0.527);
+    border: 2px solid orange;
+}
+
+.nav {
+    grid-area: nv;
+    background-color: rgba(255, 255, 0, 0.527);
+    border: 2px solid orange;
+}
+
+.sidebar {
+    grid-area: sb;
+    background-color: rgba(255, 255, 0, 0.527);
+    border: 2px solid orange;
+}
+
+.advert {
+    grid-area: ad;
+    background-color: rgba(255, 255, 0, 0.527);
+    border: 2px solid orange;
+}
+
+.footer {
+    grid-area: ft;
+    background-color: rgba(255, 255, 0, 0.527);
+    border: 2px solid orange;
+}
+
+
+@media screen and (min-width: 500px) {
+
+    .wrapper {
+        grid-template-columns: 1fr 3fr;
+        grid-template-areas:
+            "hd hd"
+            "nv nv"
+            "sb ct"
+            "ad ft";
+    }
+
+    .nav ul {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .wrapper {
+        grid-template-columns: 1fr 4fr 1fr;
+        grid-template-areas:
+            "hd hd hd"
+            "nv ct sb"
+            "nv ct ad"
+            "ft ft ft";
+    }
+
+    .nav ul {
+        flex-direction: column;
+    }
+}
